@@ -1,4 +1,11 @@
-// Blank canvas — UI will be built incrementally.
+import { PortfolioShell } from '@/components/PortfolioShell';
+import { ArticlesView } from '@/components/ArticlesView';
+import { ARTICLES } from '@/data';
+
 export default function Home() {
-  return null;
+  return (
+    <PortfolioShell>
+      <ArticlesView articles={ARTICLES} isActive={true} />
+    </PortfolioShell>
+  );
 }
