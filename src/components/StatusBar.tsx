@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
+interface StatusBarProps {
+  onHelpOpen?: () => void;
+}
+
 /** Live clock + status bar at the very bottom of the viewport. */
-export function StatusBar() {
+export function StatusBar({ onHelpOpen }: StatusBarProps) {
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -33,7 +37,12 @@ export function StatusBar() {
         <span className="mx-2">|</span>
         Color theme
       </span>
-      <span className="text-gray-600">:help for commands</span>
+      <button
+        onClick={onHelpOpen}
+        className="text-gray-600 hover:text-gray-400 focus:outline-none cursor-pointer"
+      >
+        :help for commands
+      </button>
     </footer>
   );
 }

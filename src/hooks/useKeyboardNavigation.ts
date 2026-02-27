@@ -106,12 +106,14 @@ export function useKeyboardNavigation({
 
       switch (e.key) {
         case 'ArrowUp':
+        case 'k':
           if (!listensVertical) return;
           e.preventDefault();
           setActiveIndex((prev) => clamp(prev - 1));
           break;
 
         case 'ArrowDown':
+        case 'j':
           if (!listensVertical) return;
           e.preventDefault();
           setActiveIndex((prev) => clamp(prev + 1));

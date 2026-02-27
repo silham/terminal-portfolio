@@ -1,10 +1,10 @@
 import { PortfolioShell } from '@/components/PortfolioShell';
-import { EmptyView } from '@/components/EmptyView';
+import { AboutView } from '@/components/AboutView';
 
 export default function AboutPage() {
   return (
     <PortfolioShell>
-      <EmptyView label="About" />
+      <AboutView />
     </PortfolioShell>
   );
 }

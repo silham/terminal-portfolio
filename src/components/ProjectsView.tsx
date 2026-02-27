@@ -157,7 +157,7 @@ export function ProjectsView({ projects, isActive }: ProjectsViewProps) {
             <colgroup>
               <col style={{ width: '130px' }} />
               <col style={{ width: '460px' }} />
-              <col style={{ width: '180px' }} />
+              <col style={{ width: '260px' }} />
               <col />
             </colgroup>
             <thead>
@@ -190,7 +190,7 @@ export function ProjectsView({ projects, isActive }: ProjectsViewProps) {
                   >
                     <td className="px-4 py-0.5 whitespace-nowrap text-xs leading-6">{project.date}</td>
                     <td className="px-2 py-0.5 leading-6 truncate">{project.title}</td>
-                    <td className={['px-4 py-0.5 leading-6', active ? 'text-black' : 'text-gray-500'].join(' ')}>
+                    <td className={['px-4 py-0.5 leading-6 whitespace-nowrap', active ? 'text-black' : 'text-gray-500'].join(' ')}>
                       {project.technology}
                     </td>
                     <td />
