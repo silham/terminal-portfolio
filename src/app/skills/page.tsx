@@ -1,10 +1,11 @@
 import { PortfolioShell } from '@/components/PortfolioShell';
-import { EmptyView } from '@/components/EmptyView';
+import { SkillsView } from '@/components/SkillsView';
+import { SKILLS } from '@/data';
 
 export default function SkillsPage() {
   return (
     <PortfolioShell>
-      <EmptyView label="Skills" />
+      <SkillsView categories={SKILLS} />
     </PortfolioShell>
   );
 }

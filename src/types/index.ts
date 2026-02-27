@@ -49,3 +49,36 @@ export interface Project {
   /** Optional preview image path relative to /public */
   image?: string;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Skills
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface Skill {
+  name: string;
+  excerpt: string;
+}
+
+export interface SkillCategory {
+  id: string;
+  label: string;
+  description: string;
+  skills: Skill[];
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// Certificates
+// ────────────────────────────────────────────────────────────────────────────
+
+export interface Certificate {
+  id: string;
+  slug: string;
+  date: string;
+  title: string;
+  topic: string;
+  issuer: string;
+  issuerUrl?: string;
+  technology: string;
+  excerpt: string;
+  image?: string;
+}

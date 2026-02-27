@@ -1,11 +1,11 @@
-import type { Tab, Article, Project } from '@/types';
+import type { Tab, Article, Project, SkillCategory, Certificate } from '@/types';
 
 export const TABS: Tab[] = [
   { id: 1, label: 'Articles',    path: '/' },
   { id: 2, label: 'My Projects', path: '/projects' },
   { id: 3, label: 'About',       path: '/about' },
   { id: 4, label: 'Skills',      path: '/skills' },
-  { id: 5, label: 'Talks',       path: '/contact' },
+  { id: 5, label: 'Certificates', path: '/certificates' },
 ];
 
 export const ARTICLES: Article[] = [
@@ -358,5 +358,131 @@ export const PROJECTS: Project[] = [
     title: 'Solar system in 3D on the web',
     technology: 'Three.js',
     excerpt: 'Second iteration of the solar system demo with improved orbital accuracy, atmospheric glow effects, and a minimap.',
+  },
+];
+
+export const SKILLS: SkillCategory[] = [
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    description: 'In modern system development, effective monitoring and logging are crucial for maintaining reliability and performance. Monitoring provides real-time insights into the system\'s health, helping developers and operators detect and address issues before they impact users.',
+    skills: [
+      { name: 'CSS',        excerpt: 'Deep knowledge of CSS including Flexbox, Grid, animations, custom properties, and Tailwind CSS. I care about writing maintainable, scalable styles.' },
+      { name: 'Javascript', excerpt: 'Fluent in modern JavaScript — async/await, closures, the event loop, and the full ES2022+ feature set. I write JS that is readable and bug-resistant.' },
+      { name: 'HTML5',      excerpt: 'Semantic HTML with a focus on accessibility. I use the right elements for the right job and keep markup clean and meaningful.' },
+      { name: 'React',      excerpt: 'Experienced with React hooks, context, performance optimisation (memo, useMemo, useCallback), and component composition patterns.' },
+      { name: 'Three.js',   excerpt: 'Built interactive 3D experiences in the browser using Three.js, including custom shaders, orbital mechanics, and post-processing effects.' },
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Backend',
+    description: 'Comfortable across the full server stack — from designing REST and GraphQL APIs to deploying containerised services. I favour simplicity and observability over premature abstraction.',
+    skills: [
+      { name: 'Go',         excerpt: 'Go is my primary backend language. I appreciate its simplicity, fast compile times, and first-class concurrency model for building reliable services.' },
+      { name: 'Node.js',    excerpt: 'Used Node.js for API servers, CLI tooling, and build pipelines. Familiar with the ecosystem including Express, Fastify, and tRPC.' },
+      { name: 'PostgreSQL', excerpt: 'Designed relational schemas, written complex queries, tuned indexes, and managed migrations using PostgreSQL in production environments.' },
+      { name: 'SQLite',     excerpt: 'SQLite is my go-to for embedded databases, dev environments, and small-scale production apps where operational simplicity matters.' },
+      { name: 'Docker',     excerpt: 'Write Dockerfiles, compose multi-service stacks, and understand the container lifecycle well enough to debug most production issues.' },
+    ],
+  },
+  {
+    id: 'leading-teams',
+    label: 'Leading teams',
+    description: 'Led small engineering teams through product launches and technical migrations. I believe good leadership is mostly about removing blockers, setting clear expectations, and staying in touch with the code.',
+    skills: [
+      { name: 'Code review', excerpt: 'I give thorough, constructive code reviews that focus on correctness, readability, and knowledge transfer — not style enforcement.' },
+      { name: 'Planning',    excerpt: 'Comfortable breaking down ambiguous requirements into concrete tasks. I push back when something is under-specified rather than building the wrong thing.' },
+      { name: 'Mentoring',   excerpt: 'Enjoy mentoring junior engineers through pairing, async feedback, and deliberate learning paths tailored to where they want to go.' },
+    ],
+  },
+  {
+    id: 'content-writing',
+    label: 'Content writing',
+    description: 'Writing clearly about complex technical topics is a skill I\'ve invested in deliberately. Good writing makes teams more aligned and products easier to use.',
+    skills: [
+      { name: 'Technical docs', excerpt: 'Write documentation that developers actually read — focused on why, not just what, with working examples and honest caveats.' },
+      { name: 'Blog posts',     excerpt: 'Published articles on system design, developer tooling, and software craft. I aim for depth over traffic.' },
+      { name: 'RFC / ADRs',     excerpt: 'Advocate for written architecture decision records. A short doc written before the work saves hours of confusion after.' },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Certificates
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    id: '1',
+    slug: 'certificated-typescript-engineer-acme',
+    date: 'Sun May 04 1997',
+    title: 'Certificated TypeScript Engineer from ACME',
+    topic: 'TypeScript',
+    issuer: 'ACME',
+    issuerUrl: 'https://acme.example.com',
+    technology: 'TypeScript',
+    excerpt: 'An in-depth certification covering advanced TypeScript patterns, generics, decorators, and integration with modern build tooling. Gained practical experience building type-safe APIs and scalable front-end architectures.',
+    image: '/certificates/acme-typescript.png',
+  },
+  {
+    id: '2',
+    slug: 'voluptas-amet-tenetur-dolorem',
+    date: 'Sat Dec 21 2024',
+    title: 'Voluptas amet tenetur dolorem placeat consectetur minus enim.',
+    topic: 'Practical Frozen Pants',
+    issuer: 'Johnston, Streich and Kuvalis',
+    issuerUrl: '',
+    technology: 'React, Node.js',
+    excerpt: 'Comprehensive training in modern React patterns including hooks, context, concurrent rendering, and server components integrated with a Node.js backend.',
+    image: '',
+  },
+  {
+    id: '3',
+    slug: 'autem-minima-aut',
+    date: 'Mon Apr 21 2025',
+    title: 'Autem minima aut.',
+    topic: 'Awesome Wooden Ball',
+    issuer: 'Upton - Howe',
+    issuerUrl: '',
+    technology: 'Go, PostgreSQL',
+    excerpt: 'Covered fundamentals of building high-performance backend services in Go with PostgreSQL. Topics included connection pooling, migrations, query optimisation, and production observability.',
+    image: '',
+  },
+  {
+    id: '4',
+    slug: 'nam-aut-ipsum-ea',
+    date: 'Fri Mar 28 2025',
+    title: 'Nam aut ipsum ea.',
+    topic: 'Sleek Cotton Chair',
+    issuer: 'Hodkiewicz - Walter',
+    issuerUrl: '',
+    technology: 'Docker, Kubernetes',
+    excerpt: 'Hands-on containerisation certification covering Docker image best practices, multi-stage builds, Kubernetes deployments, and rolling updates in a production-like environment.',
+    image: '',
+  },
+  {
+    id: '5',
+    slug: 'cupiditate-et-voluptatem',
+    date: 'Sun Oct 06 2024',
+    title: 'Cupiditate et voluptatem.',
+    topic: 'Tasty Concrete Pants',
+    issuer: 'Gerhold, Hane and Corwin',
+    issuerUrl: '',
+    technology: 'SQLite, Node.js',
+    excerpt: 'Focused on embedded database design with SQLite in Node.js environments. Covered WAL mode, full-text search, and patterns for offline-first applications.',
+    image: '',
+  },
+  {
+    id: '6',
+    slug: 'qui-recusandae-aut-enim',
+    date: 'Tue Nov 05 2024',
+    title: 'Qui recusandae aut enim laudantium corporis quia quam impedit doloribus.',
+    topic: 'Incredible Granite Bacon',
+    issuer: 'Franecki and Sons',
+    issuerUrl: '',
+    technology: 'CSS, HTML5',
+    excerpt: 'Advanced front-end certification exploring modern CSS layout techniques, accessibility standards, semantic HTML, and performance optimisation for large-scale web applications.',
+    image: '',
   },
 ];
