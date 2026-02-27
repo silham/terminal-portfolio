@@ -1,4 +1,4 @@
-import type { Tab, Article, Project, SkillCategory, Certificate } from '@/types';
+import type { Tab, Article, Project, SkillCategory, Certificate, GithubRepoEntry } from '@/types';
 
 export const TABS: Tab[] = [
   { id: 1, label: 'Articles',    path: '/' },
@@ -449,4 +449,15 @@ export const CERTIFICATES: Certificate[] = [
     excerpt: "Explores the concepts and algorithms at the foundation of modern artificial intelligence: graph search, adversarial search, knowledge representation, probabilistic inference, machine learning, neural networks, and natural language processing. Projects included building AI to play Minesweeper, optimise schedules, and classify text.",
     image: '/certificates/CS50AI.png',
   },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GitHub repos to display on /github (stars & commits fetched at build time)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const GITHUB_REPOS: GithubRepoEntry[] = [
+  { name: 'silham/terminal-portfolio', about: 'Terminal-styled personal portfolio built with Next.js' },
+  { name: 'silham/quiz-video-generator', about: 'Automated quiz video generator' },
+  { name: 'silham/Meeting-Performance-Analyzer', about: 'Analyse meeting recordings for performance insights' },
+  { name: 'silham/silham', about: 'GitHub profile README' },
 ];

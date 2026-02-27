@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Static — no client interactivity needed.
 
@@ -52,10 +53,8 @@ export function Header() {
       <div className="flex-1" />
 
       {/* ── GitHub link — desktop only ── */}
-      <a
-        href="https://github.com/shakilham"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href="/github"
         className="hidden md:flex items-center gap-1.5 text-sm text-gray-200 border border-gray-600 px-3 py-1 mt-1
                    hover:bg-gray-200 hover:text-black transition-colors duration-100"
       >
@@ -78,7 +77,7 @@ export function Header() {
                    0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
         </svg>
         Github
-      </a>
+      </Link>
     </header>
   );
 }

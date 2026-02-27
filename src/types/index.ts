@@ -82,3 +82,14 @@ export interface Certificate {
   excerpt: string;
   image?: string;
 }
+
+// ────────────────────────────────────────────────────────────────────────────
+// GitHub repos (static list — stars & commits fetched dynamically)
+// ────────────────────────────────────────────────────────────────────────────
+
+export interface GithubRepoEntry {
+  /** Full name e.g. "silham/terminal-portfolio" */
+  name: string;
+  /** Short description shown when API returns nothing */
+  about: string;
+}
