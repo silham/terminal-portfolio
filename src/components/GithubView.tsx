@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { ActivityDay, GHContribution } from '@lib/github';
+import type { ActivityDay, GHContribution } from '@/lib/github';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
